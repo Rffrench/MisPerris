@@ -1,0 +1,274 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+* {
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+    
+
+
+}
+/* *******************NO OLVIDAR COMENTAR********************/
+.container {
+    background: #18dd85;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap; /* esto es para que se adapte la pantalla cuando hago zoom , como wikipedia por ejemplo, row wrap va a hacer q si hago zoom la wea
+	va a pasar pa abajo	*/
+}
+
+body {
+    background: rgba(207, 202, 202, 0.459);
+}
+
+
+
+header {
+    background: #18dd85;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+    header .logo img {
+        width: 50px;
+        vertical-align: top;
+        
+    }
+
+    header .logo a{
+        color: white;
+        text-decoration: none;
+        line-height: 50px;
+        font-size:50px;
+    }
+    /*codigo barra menu superior del header*/
+    header nav{
+        width:50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: auto;
+
+    }
+    header nav a{ /*nav a es, no el nav solo pq ahi me refiero a la wea entera en vez de los links*/
+        
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        flex-grow: 1;
+        /*flex-wrap: wrap;
+        align-items: center;*/
+    }
+    
+    .main {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    
+    
+}
+
+#carrusel img:hover{ /*efecto para todas las fotos del script*/
+    transform:scale(1.5);
+    transition:all ease 1.5s;
+    cursor: auto;
+}
+
+#carrusel img{
+    width:100%;
+    
+    
+}
+
+/*.main img{ con esto se aplica a todas las imagenes de la clase, pero si tengo una nomas se aplica a esa solamente
+    width:100%;
+    vertical-align:top;
+    flex:1 1 ;
+
+    COMENTADO POR EL CARRUSEL. ESTE ES EL CSS PA UNA FOTO SOLA
+}*/
+.extras nav {
+    color:white;
+    /*justify-content: space-between;*/
+    text-align: center;
+    display: flex; /*ponerlo igual siempre*/
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+
+.social nav img{
+    width: 40%;
+}
+
+.vista2{
+    background: white;
+    display: flex;
+    /*flex:1 1 70%;
+    align-items: row;
+    flex-direction: row;
+    justify-content: row;*/
+}
+
+/*articulos de vista 2*/
+.info{   
+    margin-bottom: 20px;
+    padding-bottom:20px;
+    flex-wrap:wrap;
+    text-align: right;
+    width: 100%;
+    padding: 15px;
+    flex:1 1 70%;
+    
+}
+
+/*.info p{
+    margin-left: 10%;
+}
+
+.info img{
+    width:35%;
+    text-align: right;
+}*/
+
+.info2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: left;
+    padding: 5px;
+    flex:1 1 70%;
+}
+
+.info2 button{
+    display: inline-block;
+    flex-direction: column;
+    
+}
+
+/*.info button{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}*/
+
+/*.info img:nth-last-child(1) {
+    width: 75%;
+}*/
+
+/*COLLAGE */
+.collage {
+    width: 100%;
+    max-width: 1000px;
+ 
+    margin: auto;
+	display:flex;
+	justify-content:space-between;
+}
+
+.collage .caja{ /*lo mismo que dejar .caja solo */
+    width: 32%;
+    overflow: hidden;
+    box-shadow:10px 10px 5px 0px rgba(0,0,0,0.75);
+	display:flex;
+	flex-direction:column;
+    justify-content:space-between;
+}
+
+.collage .caja img{
+    width: 100%;
+    height: 32%;
+}
+
+.collage .largo img{ /*esta es la clase caja largo*/
+    height: 48%;
+}
+
+
+
+/* LOGIN BOOTSTRAP CSS */ 
+.login-block{
+    background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+float:left;
+width:100%;
+padding : 50px 0;
+overflow: hidden;
+}
+.banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.logincontainer{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+.carousel-inner{border-radius:0 10px 10px 0;}
+.carousel-caption{text-align:left; left:5%;}
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.login-sec .copy-text i{color:#FEB58A;}
+.login-sec .copy-text a{color:#E36262;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-login{background: #DE6262; color:#fff; font-weight:600; }
+.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+.banner-text h2{color:#fff; font-weight:600;}
+.banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
+.banner-text p{color:#fff;}
+
+
+
+/* REGISTRO BOOTSTRAP CSS */ 
+.register-block{
+    background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+float:right;
+width:100%;
+padding : 50px 0;
+overflow: hidden;
+}
+
+.registercontainer{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+.register-sec{padding: 50px 30px; position:relative;}
+.register-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.register-sec .copy-text i{color:#FEB58A;}
+.register-sec .copy-text a{color:#E36262;}
+.register-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
+.register-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-register{background: #DE6262; color:#fff; font-weight:600; }
+
+
+.btn-links{background: #DE6262; color:#fff; font-weight:600; }
+
+
+
+
+
+
+footer{
+    background: rgb(196, 196, 196);
+    display: flex;
+    width: 100%;
+    text-align: top;
+    padding:2%;
+}
+/*Esto es para cuando detecte versiones de escritorio basicamente, achicará el carrusel*/
+@media screen and (min-width: 800px){
+
+    .container{
+        width: 70%;
+    }
+
+    #carrusel img{
+        height: 500px;
+    }
+
+}

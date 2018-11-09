@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+{% load static %}
+{% block ListarRescatados %}
+
+
+<div class="border boder-secondary" style="background-color: white; ">
+
+    <input class="m-3  btn btn-login" type="button" value="Disponibles" style="width:50%;" onclick="location.href = '{% url 'listardisponibles' %}';">
+    <input class="m-3 btn btn-login" type="button" value="Todos" style="width:50%;" onclick="location.href = '{% url 'listardisponibles' %}';">
+
+</div>
+
+
+
+
+{% endblock %}

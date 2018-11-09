@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+{% load static %}
+{% block ListarDisponibles %}
+
+{% if rescatados %}
+
+    <table>
+        <td>
+            <tr>Nombre Rescatado</tr> <br/>
+        </td>
+
+        {% for r in disponibles %}
+
+        <td>
+           <br/><tr>{{r.idRescatado}}</tr><br/> <tr>{{r.nombreRescatado}}</tr><br/><tr>{{r.razaRescatado}}</tr><br/><tr><img src="{{r.fotoRescatado.url}}" width="20%"></tr><br/>
+        </td>
+
+        {% endfor %}
+    </table>
+
+    {% else %}
+        <h1 style="text-align:center;">No hay mascotas disponibles</h1>
+
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "master.html" %}
+{% load static %}
+{% block AgregarRescatado %}
+
+<section class="register-block">
+        <div class="registercontainer">
+    <div class="row">
+        <div class="col-md-12 register-sec">
+            <h2 class="text-center">Agregar Rescatado</h2>
+            <form method="POST" class="register-form" enctype="multipart/form-data">
+    
+                
+    <div class="col-6">
+                {% csrf_token %}
+                {{form.as_p}}
+    </div>
+    
+    <div class="form-check col-md-6">
+    <button type="submit" class="btn btn-register float-right">Agregar</button>
+    </div>
+    
+    
+    </form>
+
+    {% if rescatados %}
+
+    <table>
+        <td>
+            <tr>Nombre Rescatado</tr> <br/>
+        </td>
+
+        {% for r in rescatados %}
+
+        <td>
+           <br/><tr>{{r.idRescatado}}</tr><br/> <tr>{{r.nombreRescatado}}</tr><br/><tr>{{r.razaRescatado}}</tr><br/><tr><img src="{{r.fotoRescatado.url}}" width="20%"></tr><br/>
+        </td>
+
+        {% endfor %}
+    </table>
+
+    {% endif %}
+    
+    
+    </section>
+
+{% endblock %}

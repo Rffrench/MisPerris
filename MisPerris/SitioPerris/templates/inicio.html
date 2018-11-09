@@ -1,0 +1,77 @@
+{% extends "master.html" %}
+{% load static %}
+{% block MainPrincipal %}
+
+
+<!--<img src="images/perroportada.jpg" alt="perroprincipal" />   ESTA ES LA FOTO SOLA-->
+<div id="carrusel"><!--Carrusel usando bxslider-->
+    
+                <div><img src="{% static 'images/01.jpg' %}"></div>
+                <div><img src="{% static 'images/02.jpg' %}"></div>
+                <div><img src="{% static 'images/03.jpg' %}"></div>
+                <div><img src="{% static 'images/04.jpg' %}"></div>
+                <div><img src="{% static 'images/05.jpg' %}"></div>
+
+</div>
+<div class="extras"> <!--Extras de contacto y RRSS-->
+   
+    <nav>
+    <b align="left">+569 98765431</b>
+    <b align="center">Rescate y adopción de perros callejeros </b>
+    <div class="social">
+        <nav>
+        <a href="#"><img src="{% static 'images/facebook.png' %}" /></a>
+        <a href="#"><img src="{% static 'images/googleplus.png' %}" /></a>
+        <a href="#"><img src="{% static 'images/instagram.jpg' %}" /></a>
+        <a href="#"><img src="{% static 'images/envelope.png' %}" /></a>
+        </nav>
+    </div>
+</nav>      
+
+<div class="vista2">
+<section class="info">
+        <h1>RESCATE</h2>
+        <h4>ETAPA UNO</h3>
+        <hr width="40px"/>
+        <p>Rescatamos perros en situación de peligro y/o abandono. Los rehabilitamos y los preparamos para 
+            buscarles un hogar
+
+        </p>
+        <img src="{% static 'images/perrorescate.jpg' %}" />
+    </section>
+    <section class="info2">
+        <img src="{% static 'images/perrocrowdfunding.jpg' %}" />
+            <h1>CROWDFUNDING</h2>
+            <h4>FINANCIAMIENTO</h3>
+            <hr width="40px"/>
+            <p>Sigue nuestras redes sociales para informarte acerca de las diversas campañas y actividades 
+                que realizamos para obtener financiamiento para seguir ayudando 
+
+            </p>
+            <button name="btn_campanas">CAMPAÑAS</button>
+        </section>
+
+        
+</div>
+<!--Código para el collage separado en 3 divs para aplicarles css distintos a cada uno-->
+<div class="collage">
+    <div class="caja">
+        <img src="{% static 'images/nueve.jpg' %}" alt="Nueve">
+        <img src="{% static 'images/siete.jpg' %}" alt="Siete">
+        <img src="{% static 'images/ocho.jpg' %}" alt="Ocho">
+    </div>
+    <div class="caja largo">
+        <img src="{% static 'images/seis.jpg' %}" alt="Seis">
+        <img src="{% static 'images/cinco.jpg' %}" alt="Cinco">
+    </div>
+    <div class="caja">
+        <img src="{% static 'images/cuatro.jpg' %}" alt="Cuatro" style="height:62%">
+        <img src="{% static 'images/uno.jpg' %}" alt="Uno">
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+

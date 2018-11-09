@@ -1,0 +1,43 @@
+{% extends "master.html" %}
+{% load static %}
+{% block RegistroUsuarios %}
+
+<section class="register-block">
+    <div class="registercontainer">
+<div class="row">
+    <div class="col-md-12 register-sec">
+        <h2 class="text-center">Registro Usuarios</h2>
+        <form method="POST" class="register-form">
+
+            
+<div class="col-6">
+            {% csrf_token %}
+            {{form.as_p}}
+</div>
+
+<div class="form-check col-md-6">
+<button type="submit" class="btn btn-register float-right">Registrarse</button>
+</div>
+
+
+</form>
+
+{% if usuarios %}
+<table>
+
+    <tr>
+        <td>Nombre Usuario</td><td>Password</td><td>Direccion</td>
+    </tr>
+    {% for u in usuarios %}
+    <tr>
+        <td>{{u.user.username}}</td><td>{{u.user.password}}</td><td>{{u.direccionUsuario}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+</section>
+
+
+
+{% endblock %}

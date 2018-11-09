@@ -1,0 +1,95 @@
+<!--ROBERTO FFRENCH-DAVIS Solemne 2-->
+{% load static %}
+<!doctype html>
+<html lang="es">
+<!--*******************NO OLVIDAR COMENTAR********************-->
+<!--https://css-tricks.com/snippets/css/a-guide-to-flexbox/    GUIA FLEXBOX-->
+<head>
+
+    <meta charset="utf-8">
+    <title>{{ titulo }}</title>
+    <meta name="description" content="Fundación de adopción de perros callejeros"><!-- descripcion buscadores -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <!--las escalas indican un punto inicial,la escala maxima y minima. La propiedad initial-scale controla el nivel de zoom cuando
+     la página se carga por primera vez.Las propiedades maximum-scale, minimum-scale, y user-scalable controlan la forma en cómo
+     se permite a los usuarios aumentar o disminiuir el zoom en la página.-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesmaster.css' %}">
+    <script src="{% static 'js/prefix.js' %}" type="test/javascript"></script>
+    <script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+    <script src="{% static 'js/codigo.js' %}"></script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="{% url 'inicio' %}">
+                    <img src="{% static 'images/logo.png' %}" width="100" alt="logo">
+                </a>
+                <a href="{% url 'inicio' %}">Mis Perris</a>
+            </div>
+            <nav>
+                <!-- esto te hace el menu en vez del ul o las listas.. estan depricadas -->
+                <a href="{% url 'inicio' %}">Inicio</a> <!-- puedo poner una página web en vez del #. Si es externo al server le tengo q poner http.. -->
+                <a href="#">Quiénes Somos</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contáctanos</a>
+                <a href="{% url 'login' %}">Iniciar Sesión</a>
+                <a href="{% url 'registro' %}">Registrarse</a>
+                <a href="{% url 'agregarrescatado' %}">Agregar Rescatado</a>
+                <a href="{% url 'listarrescatados' %}">Listar Rescatados</a>
+            </nav>
+
+        </header>
+
+        <div class="mainPrincipal">
+            {% block MainPrincipal %}
+            {% endblock %}
+        </div>
+
+        <div class="login">
+            {% block Login %}
+            {% endblock %}
+        </div>
+
+        <div class="registrousuarios">
+            {% block RegistroUsuarios %}
+            {% endblock %}
+        </div>
+
+        <div class="agregarrescatado">
+            {% block AgregarRescatado %}
+            {% endblock %}
+        </div>
+
+        <div class="listarrescatado">
+            {% block ListarRescatados %}
+            {% endblock %}
+        </div>
+
+        <div class="listardisponibles">
+            {% block ListarDisponibles %}
+            {% endblock %}
+        </div>
+
+        <div class="forgotpassword">
+            {% block ForgotPassword %}
+            {% endblock %}
+        </div>
+
+
+
+        
+        <!--Footer con mensaje -->
+        <footer>
+            Desarrollo Web y Mobile
+        </footer>
+
+    </div>
+</body>
+</html>
